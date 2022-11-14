@@ -81,7 +81,7 @@ _________ Tipos de Controle de Versão ____________
 		
 	* Ignorando um arquivo
 	
-		touch arquivo.gitignore -- Cria um arquivo .gitignore usando o terminal o qual será ignorado 
+		touch .gitignore -- Cria um arquivo .gitignore usando o terminal o qual será ignorado 
 
 
 Passos para mergear códigos entre diferentes branchs
