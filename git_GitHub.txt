@@ -1,3 +1,4 @@
 Comandos GIT
 
 * git init
+* git status
