@@ -3,7 +3,8 @@ Git e GitHub
 Git é uma ferramenta de versionamento de código
 
 --> Versionamento de código ou software é o processo de criar novas versões de um código toda vez
-que existir uma mudança significativa nele. Uma vez que, todo o projeto de desenvolvimento de software é feito em etapas, sendo que as funcionalidades são incrementadas aos poucos. 
+que existir uma mudança significativa nele. Uma vez que, todo o projeto de desenvolvimento de software é feito em etapas, 
+sendo que as funcionalidades são incrementadas aos poucos. 
 
 --> O versionamento atualmente é realizado de forma local e distribuído, enviando as versões para um repositório remoto.
 
@@ -147,17 +148,28 @@ Os principais comandos que usamos para trabalhar com o GitHub enviando atualiza�
  
  Wath = Serve para observar a evolução do projeto e receber atualizações sobre o mesmo.
  
- Fork = Realiza uma cópia com todo o histórico de um projeto, por exemplo, quando ao navegar pelo github encontro um projeto de meu interesse e que gostaria de salva-lo realizar alterações e contribuições com o mesmo, uso o fork para criar um repositório no meu github possibilitando tais modificações. (O repositório é criado na minha conta, porém as alterações feitas não são adicionadas ao projeto inicial sem prévio envio e autorização por parte do dono do repositório original)
+ Fork = Realiza uma cópia com todo o histórico de um projeto, por exemplo, quando ao navegar pelo github encontro um projeto de meu interesse
+ e que gostaria de salva-lo realizar alterações e contribuições com o mesmo, uso o fork para criar um repositório no meu github 
+ possibilitando tais modificações. (O repositório é criado na minha conta, porém as alterações feitas não são adicionadas ao 
+ projeto inicial sem prévio envio e autorização por parte do dono do repositório original)
  
-Pull Request = Envia uma sugestão de modificação ou contribuição para um determinado projeto. Ele é muito importante pois caso eu verifique a necessidade de ser feita uma alteração no projeto mas eu não tenha total certeza desta ação criando um pull request não terei problemas pois as alterações no projeto original só seram feitas pelo autor do projeto.
+Pull Request = Envia uma sugestão de modificação ou contribuição para um determinado projeto. Ele é muito importante pois caso eu 
+verifique a necessidade de ser feita uma alteração no projeto mas eu não tenha total certeza desta ação criando um pull request não
+terei problemas pois as alterações no projeto original só seram feitas pelo autor do projeto.
 
-Issues = Servem basicamente para que possamos relatar algum erro que eu identifiquei em um projeto. Por exemplo, estou analisando um projeto em um repositório X que achei interessante, durante minha análise identifiquei que alguns possíveis erros foram cometidos no desenvolvimento do mesmo, assim ao criar um issues estou relatando tais erros ao dono do projeto em questão.
+Issues = Servem basicamente para que possamos relatar algum erro que eu identifiquei em um projeto. Por exemplo, estou analisando 
+um projeto em um repositório X que achei interessante, durante minha análise identifiquei que alguns possíveis erros foram cometidos 
+no desenvolvimento do mesmo, assim ao criar um issues estou relatando tais erros ao dono do projeto em questão.
 
 Milestones = Servem para fornecer informações sobre o andamento das atualizações referentes a issues e pull requests.
 
-Labels = Servem basicamente para poder marcar uma tag de identificação as issues. Assim, quando eu leio uma issue sugerida para o meu projeto posso classificar o que eu consegui identificar com aquela sugestão de issue. (Pode seridentificada com as labels que já existem por padrão no github ou também por meio da criação de novas labels).
+Labels = Servem basicamente para poder marcar uma tag de identificação as issues. Assim, quando eu leio uma issue sugerida para o meu 
+projeto posso classificar o que eu consegui identificar com aquela sugestão de issue. (Pode seridentificada com as labels que já existem 
+por padrão no github ou também por meio da criação de novas labels).
 
-Tags = Uma tag é muito importante pelo fato que muitos projetos demandam de longos períodos de desenvolvimento e inúmeros commits são criados, assim as tags servem justamente para marcar pontos onde o projeto atingiu determinado nível de desenvolvimento, por exemplo, quando finalizar uma determinada funcionalidade podemos marcar que naquele momento do projeto tivemos uma uma etapa concluída. 
+Tags = Uma tag é muito importante pelo fato que muitos projetos demandam de longos períodos de desenvolvimento e inúmeros commits são criados, 
+assim as tags servem justamente para marcar pontos onde o projeto atingiu determinado nível de desenvolvimento, por exemplo, quando finalizar
+uma determinada funcionalidade podemos marcar que naquele momento do projeto tivemos uma uma etapa concluída. 
 
 	--> Para criar uma tag podemos fazer o seguinte
 
@@ -192,7 +204,10 @@ Tags = Uma tag é muito importante pelo fato que muitos projetos demandam de lon
 		
 	
 
-Arquivo README --> Possui a funcionalidade de informar sobre o que se trata um determinado projeto. Nele podemos informar o objetivo do projeto, bem como, adicionar informações relevantes como suas funcionalidades e dores que o mesmo propõe resolver. O arquivo readme possui mais semelhança com um arquivo .html do que com .txt, pois o mesmo é escrito em uma linguagem de marcação. Podemos usar o DIllinger para criar o arquivo por exemplo.
+Arquivo README --> Possui a funcionalidade de informar sobre o que se trata um determinado projeto. Nele podemos informar o 
+objetivo do projeto, bem como, adicionar informações relevantes como suas funcionalidades e dores que o mesmo propõe resolver.
+O arquivo readme possui mais semelhança com um arquivo .html do que com .txt, pois o mesmo é escrito em uma linguagem de marcação.
+Podemos usar o DIllinger para criar o arquivo por exemplo.
 
  * Comandos intermediários e avançados
  
@@ -200,7 +215,8 @@ Arquivo README --> Possui a funcionalidade de informar sobre o que se trata um d
  
  	Branch é uma ramificação no projeto que permite que funcionalidades sejam desenvolvidas separadamente sem mpactar funcionalidades estáveis no projeto.
  	
- 	Uma branch serve para isolar partes do código. Em geral, é usada para isolar o que está sendo desenvolvido do que está sendo publicado. O código de produção, que está publicado para os usuários, na branch master.
+ 	Uma branch serve para isolar partes do código. Em geral, é usada para isolar o que está sendo desenvolvido do que 
+	está sendo publicado. O código de produção, que está publicado para os usuários, na branch master.
  	
  	git checkout nome_branch_que_puxarei_as_alterações -- Trás as alterações para a branch que estou
  	 	
@@ -248,7 +264,8 @@ ________________________________________________________________________________
 
 Fetch
 
-—> git fetch (trás atualizações do repositório não local (github)). Ele trás as atualizações para o repositório local porém não aplica as mesmas. Para poder ver as atualizações uso:
+—> git fetch (trás atualizações do repositório não local (github)). Ele trás as atualizações para o repositório local porém não
+aplica as mesmas. Para poder ver as atualizações uso:
 
 —> git log origin/nome_branch —oneline
 
