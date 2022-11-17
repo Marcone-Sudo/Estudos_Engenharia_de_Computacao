@@ -1,0 +1,289 @@
+Git e GitHub
+
+Git é uma ferramenta de versionamento de código
+
+--> Versionamento de código ou software é o processo de criar novas versões de um código toda vez
+que existir uma mudança significativa nele. Uma vez que, todo o projeto de desenvolvimento de software é feito em etapas, 
+sendo que as funcionalidades são incrementadas aos poucos. 
+
+--> O versionamento atualmente é realizado de forma local e distribuído, enviando as versões para um repositório remoto.
+
+--> Usado em empresas de software principalmente para o gerenciamento das versões de software em pequenos e grandes projetos.
+
+====== Principais vantagens do uso de versionamento de código. =======
+
+ * Controle de histórico
+ 	- Alternar entre versões
+ 	- Tranquilidade em saber que existe um "plano B" caso as mudanças não deem certo
+ 	
+ * Trabalho em equipe
+ 	- Desenvolvimento em paralelo em diferentes ambientes
+ 	
+ * Ramificação do projeto
+ 	- Possibilidade de criar várias versões a partir de um ponto
+ 	- Junção das funcionalidades após finalizadas
+ 	
+ * Segurança
+ 	- Permite que não sejam perdidas atualizações no código no decorrer do seu desenvolvimento
+ 	
+ * Organização
+ 	- Permite com que o desenvolvimento de um projeto possa ocorrer de forma organizada e 	eficiente.
+
+ * Rastreabilidade
+ 	- Permite identificar o caminho de alterações realizadas ao longo do desenvolvimento.
+
+
+_________ Tipos de Controle de Versão ____________
+
+ * Centralizado
+ 	- Servidor centralizado que possui todo o histórico
+ 	- Padrão durante muitos anos
+ 		* Subversion (SVN) surgiu no ano de 2000
+ 		* Git surgiu no final de 2005
+ 
+ * Descentralizado 
+ 	- Cada computador possui uma cópia do repositório
+ 		* Alterações rápidas e locais
+ 		* Réplicas de repositórios caso o central se perca
+ 		
+ +++++++++++++ Características do GIT ++++++++++++++++++
+ 
+ * Operações locais
+ 	* Navegação pelo histórico
+ 	* Criação de branch
+ 	
+ * Somente adição de conteúdo
+ 	* Mesmo a remoção de arquivo, é feito através de uma adição de versão onde diz que o arquivo foi removido
+ 	
+ * Integridade 
+ 	* Uma vez um arquivo adicionado, todo seu histórico é mantido
+ 	
+ * Autonomia
+ 	* Facilidade para colaboradores realizarem alterações sem a dependência de arquivos.
+ 	
+
+	* Verificação da versão do GIT instalada em sua máquina.
+
+	git --version
+	
+	* Configurações de Usuário
+
+	git config --global user.name "Marcone de Freitas Marques"
+	git config --global user.mail "mmsap1998@gmail.com"
+	
+	git config --list (lista todas as configurações feitas)
+	
+	* Formas de adc um arquivo 
+	
+		git add "nome_arquivo"
+		git add .
+		git add --all
+		git add -A
+		
+	* Ignorando um arquivo
+	
+		touch .gitignore -- Cria um arquivo .gitignore usando o terminal o qual será ignorado 
+
+
+Passos para mergear códigos entre diferentes branchs
+
+1 - git pull da branch principal
+2 - gerar uma nova branch a partir da branch principal
+3 - Trabalhar e adicionar novas funcionalidades na nova branch que criou
+4 - Finalizar o trabalho na branch temporária
+5 - git checkout na branch principal
+6 - git pull
+7 - Mergiar(unir) o código da branch temporária com a branch principal(depois de testar)
+8 - git push da branch principal
+
+
+++++++ Principais comandos usados no dia a dia ++++++
+
+1 - git init -> Inicializa um novo repositório
+
+2 - git add . --> Adiciona os arquivos atuais ao próximo commit (Podemos delimitar o arquivo por meio de aspas passando o seu respetivo nome)
+
+3 - git status --> Verifica o status atual dos repositórios do git 
+
+4 - git commit -m "mensagem do commit" --> Cria um novo commit com uma mensagem
+
+5 - git push --> Envia as atualizações para a nuvem na branch atualmente ativa
+
+6 - git branch --> Permite listar e ver qual branch está ativa atualmente.
+
+7 - git checkout nome_da_branch --> Permite mudar para uma nova branch
+
+8 - git checkout -b "nome_da_branch_de_origem" "nome_da_nova_branch" --> Permite mudar e criar uma nova branch com base em outra
+
+9 - git merge "branch_a_receber_merge" --> Permite fazer o merge da branch ativa atualmente com outra branch
+
+10 - git pull --> Atualiza a branch atualmente ativa
+
+11 - git diff --> Mostra todas as modificações feitas
+	* git diff --cacher (Diferenças na área de preparação)
+	* git diff --staged (Mostra as configurações)
+
+12 - git log --> Passa uma listagem de todas as modificações feitas no repositório, da última para a primeira alteração.
+	git log --oneline (Realiza a mesma operação acima porém em uma linha apenas)
+
+13 - git reset --hard --> Desfaz todas as alterações, como senão houvessem nenhuma alteração feita.
+
+14 - git clean -f --> Força apagar rquivos adicionados mas não rastreados
+
+15 - git clone --> Passando o parâmetro do que eu gostaria de clonar, posso baixar todo o histórico do projeto em questão.
+
+16 - git reset --hard --> Desfazer commits
+______________________________________________________________________________________________
+
+GitHub
+
+O GitHub é muito utilizado atualmente, conta com mais de 40 milhões de repositórios.
+
+Os principais comandos que usamos para trabalhar com o GitHub enviando atualizações ou até mesmo baixando são:
+ 
+ 	git puch
+ 	git pull
+ 	
+ Star = Serve para podermos adicionar um projeto no meus favoritos.
+ 
+ Wath = Serve para observar a evolução do projeto e receber atualizações sobre o mesmo.
+ 
+ Fork = Realiza uma cópia com todo o histórico de um projeto, por exemplo, quando ao navegar pelo github encontro um projeto de meu interesse
+ e que gostaria de salva-lo realizar alterações e contribuições com o mesmo, uso o fork para criar um repositório no meu github 
+ possibilitando tais modificações. (O repositório é criado na minha conta, porém as alterações feitas não são adicionadas ao 
+ projeto inicial sem prévio envio e autorização por parte do dono do repositório original)
+ 
+Pull Request = Envia uma sugestão de modificação ou contribuição para um determinado projeto. Ele é muito importante pois caso eu 
+verifique a necessidade de ser feita uma alteração no projeto mas eu não tenha total certeza desta ação criando um pull request não
+terei problemas pois as alterações no projeto original só seram feitas pelo autor do projeto.
+
+Issues = Servem basicamente para que possamos relatar algum erro que eu identifiquei em um projeto. Por exemplo, estou analisando 
+um projeto em um repositório X que achei interessante, durante minha análise identifiquei que alguns possíveis erros foram cometidos 
+no desenvolvimento do mesmo, assim ao criar um issues estou relatando tais erros ao dono do projeto em questão.
+
+Milestones = Servem para fornecer informações sobre o andamento das atualizações referentes a issues e pull requests.
+
+Labels = Servem basicamente para poder marcar uma tag de identificação as issues. Assim, quando eu leio uma issue sugerida para o meu 
+projeto posso classificar o que eu consegui identificar com aquela sugestão de issue. (Pode seridentificada com as labels que já existem 
+por padrão no github ou também por meio da criação de novas labels).
+
+Tags = Uma tag é muito importante pelo fato que muitos projetos demandam de longos períodos de desenvolvimento e inúmeros commits são criados, 
+assim as tags servem justamente para marcar pontos onde o projeto atingiu determinado nível de desenvolvimento, por exemplo, quando finalizar
+uma determinada funcionalidade podemos marcar que naquele momento do projeto tivemos uma uma etapa concluída. 
+
+	--> Para criar uma tag podemos fazer o seguinte
+
+		git tag -a nome_tag -m "mensagem"
+		
+	--> Para enviar uma tag para o repositório 
+	
+		git push origin nome_tag
+		
+	--> Remover uma tag
+	
+		git tag -d nome_tag (local)
+		
+		git push --delete origin nome_tag (servidor)
+		
+	--> Tag em commits antigos
+	
+		1 ª forma
+		
+		git log --oneline (encontrar o commit)
+		
+		git chekout nome_commit (entrar no commit)
+		
+		git tag -a nome_tag -m "mensagem" (criar a tag)
+		
+		
+		2 ª forma
+		
+		git log --oneline (encontrar commit)
+		
+		git tag -a nome_tag nome_commit (Criando diretamente no commit)
+		
+	
+
+Arquivo README --> Possui a funcionalidade de informar sobre o que se trata um determinado projeto. Nele podemos informar o 
+objetivo do projeto, bem como, adicionar informações relevantes como suas funcionalidades e dores que o mesmo propõe resolver.
+O arquivo readme possui mais semelhança com um arquivo .html do que com .txt, pois o mesmo é escrito em uma linguagem de marcação.
+Podemos usar o DIllinger para criar o arquivo por exemplo.
+
+ * Comandos intermediários e avançados
+ 
+ --> Comandos de branch
+ 
+ 	Branch é uma ramificação no projeto que permite que funcionalidades sejam desenvolvidas separadamente sem mpactar funcionalidades estáveis no projeto.
+ 	
+ 	Uma branch serve para isolar partes do código. Em geral, é usada para isolar o que está sendo desenvolvido do que 
+	está sendo publicado. O código de produção, que está publicado para os usuários, na branch master.
+ 	
+ 	git checkout nome_branch_que_puxarei_as_alterações -- Trás as alterações para a branch que estou
+ 	 	
+ 	Comandos de Branch
+ 	
+ 	--> git branch - Lista todas as branch existentes
+ 	
+ 	--> git branch nome_branch -- Cria uma nova branch
+ 	
+ 	--> git checkout -b nome_da_branch -- Faz a mudança de uma branch atual para a branch listada
+ 	
+ 	--> git branch -d nome_da_branch -- Remove a branch local
+		* Caso não seja autorizado podemos usar 
+			git branch -D nome_da_branch
+ 	
+ 	--> git push --delete origin nome_da_branch -- Apaga a branch do servidor
+ 	
+ 	--> git branch -m novo_nome -Update - Estando na branch
+ 	
+ 	--> git branch -m antigo_nome -Update novo_nome - Não estando na branch
+ 	
+ 	
+______________________________________________________________________________________________
+
+Alguns comandos do terminal importantes
+
+* Criar pasta
+
+mkdir nome_pasta
+
+* Criar arquivo
+
+touch nome_arquivo
+
+* Listar arquivos ocultos
+
+dir -a
+
+* Fechar terminal
+
+ctrol + d
+
+________________________________________________________________________________________________
+
+
+Fetch
+
+—> git fetch (trás atualizações do repositório não local (github)). Ele trás as atualizações para o repositório local porém não
+aplica as mesmas. Para poder ver as atualizações uso:
+
+—> git log origin/nome_branch —oneline
+
+Alias:
+
+Permite configurar os comando para que os mesmos sejam menores
+
+—> git config - -global alias.s status (cria)
+
+—> git config - - global - - unset alias.s (remove)
+
+Remote
+
+Acessar a url associada a um projeto
+
+—> git remote -v
+
+Grep
+
+—> git branch | grep padrao_de_busca (Lista todas as branchs com o padrão de busca informada)
+
